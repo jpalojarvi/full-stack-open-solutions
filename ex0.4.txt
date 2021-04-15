@@ -1,0 +1,26 @@
+Title FSO ex. 0.4
+
+User -> Browser: Writes 'something' into the text field at the bottom
+User -> Browser: Clicks the Save-button
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server-->Browser: HTML-code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->Browser: main.js
+
+note over Browser:
+Starts executing javascript-code
+that requests JSON data from the Server
+end note
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: ...{"content":"something","date":"2021-04-15T10:14:35.298Z"}]
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server-->Browser: Favorites-icon doesn't exist -> return default HTML code instead
+
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
