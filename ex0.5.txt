@@ -1,0 +1,27 @@
+Title FSO ex. 0.5 solution
+
+User -> Browser: Paste link https://studies.cs.helsinki.fi/exampleapp/spa
+User -> Browser: Push enter
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server-->Browser: HTML-code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Browser: spa.js
+
+note over Browser:
+Starts executing javascript-code
+that requests JSON data from the Server
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: data.json containing the user-added notes
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+Server-->Browser: Favorites-icon doesn't exist -> return default HTML code instead
+
+
+
+
