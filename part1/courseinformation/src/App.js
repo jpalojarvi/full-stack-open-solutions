@@ -1,7 +1,7 @@
 import React from 'react'
 
 const App = () => {
-  console.log('Hello from the component app')
+  console.log('App loaded')
   // const-definitions
   const course = {
     name: "Half Stack application development",
@@ -44,6 +44,7 @@ const Part = (props) => {
 }
 
 const Header = (props) => {
+  console.log(props)
   return (
     <h1>{props.course.name}</h1>
   )
