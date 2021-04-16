@@ -1,4 +1,4 @@
-Title FSO ex. 0.4 solution 
+Title FSO ex. 0.4 solution
 
 User -> Browser: Writes 'something' into the text field at the bottom
 User -> Browser: Clicks the Save-button
