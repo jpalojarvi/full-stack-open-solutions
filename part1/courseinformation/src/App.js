@@ -1,19 +1,22 @@
 import React from 'react'
 
 const App = () => {
-  console.log('Hello from the component app')
+  console.log('App loaded')
   // const-definitions
   const course = {
     name: "Half Stack application development",
     part: [
+      // part[0]
       {
         name: "Fundamentals of React",
         numberOfExercises: 10
       },
+      // part[1]
       {
         name: "Using props to pass data",
         numberOfExercises: 7
       },
+      // part[2]
       {
         name: "State of a component",
         numberOfExercises: 14
@@ -41,6 +44,7 @@ const Part = (props) => {
 }
 
 const Header = (props) => {
+  console.log(props)
   return (
     <h1>{props.course.name}</h1>
   )
