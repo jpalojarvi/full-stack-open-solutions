@@ -1,0 +1,8 @@
+Title FSO ex. 0.6 solution
+
+User -> Browser: Writes 'something' into the text field at the bottom
+User -> Browser: Clicks the Save-button
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Server-->Browser: {"message":"note created"}
+
+note over Browser: Note 'something' is appended to the list of notes without refreshing the page
